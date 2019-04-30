@@ -4,11 +4,13 @@ import { AppComponent } from './app.component';
 import { AboutComponent } from './about/about.component';
 import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
 import { AppRoutingModule } from './app-routing.module';
+import { DonateComponent } from './donate/donate.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    AboutComponent
+    AboutComponent,
+    DonateComponent
   ],
   imports: [
     BrowserModule,
