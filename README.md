@@ -1,3 +1,3 @@
 # PaperStrawsCharlie
-## If node_modules are missing from your local machine and the code won't run
+## If node_modules Are Missing From Your Local Machine:
 ## Use `npm i`
