@@ -1,4 +1,18 @@
-<p>
-  about works!
-</p>
-<router-outlet></router-outlet>
+<main>
+  <div class="container">
+      <div class="row row-offcanvas row-offcanvas-right">
+          <div class="col-xs-12 col-sm-9">
+              <ol class="breadcrumb">
+                  <li class="breadcrumb-item"><a routerLink="/home">Home</a></li>
+                  <li class="breadcrumb-item active">About</li>
+              </ol>
+              <div class="jumbotron">
+                  <h1>About Our Mission</h1>
+                  <p>Welcome to our global calling.</p>
+              </div>
+              <router-outlet></router-outlet>
+          </div>
+          <router-outlet name="sidemenu"></router-outlet>
+      </div>
+  </div>
+</main>
