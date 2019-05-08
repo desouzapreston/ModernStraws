@@ -5,9 +5,8 @@ import { DonateComponent } from './donate/donate.component';
 import { HomeComponent } from './home/home.component';
 import { SideMenuComponent } from './side-menu/side-menu.component';
 
-export const routes: Routes = [
-  {
-    { path: 'about', component: AboutComponent },
+const routes: Routes = [
+  { path: 'about', component: AboutComponent },
   { path: 'donate', component: DonateComponent },
   { path: 'home', component: HomeComponent },
   { path: '', redirectTo: '/home', pathMatch: 'full' }, //empty path case
