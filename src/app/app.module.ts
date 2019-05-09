@@ -6,7 +6,6 @@ import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
 import { AppRoutingModule } from './app-routing.module';
 import { DonateComponent } from './donate/donate.component';
 import { HomeComponent } from './home/home.component';
-import { AboutCardsComponent } from './about-cards/about-cards.component';
 import { SideMenuComponent } from './side-menu/side-menu.component';
 
 @NgModule({
@@ -15,8 +14,7 @@ import { SideMenuComponent } from './side-menu/side-menu.component';
     AboutComponent,
     DonateComponent,
     HomeComponent,
-    AboutCardsComponent,
-    SideMenuComponent
+    SideMenuComponent,
   ],
   imports: [
     BrowserModule,
