@@ -8,6 +8,7 @@ import { DonateComponent } from './donate/donate.component';
 import { HomeComponent } from './home/home.component';
 import { MatButtonModule, MatCardModule, MatToolbarModule } from '@angular/material';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MenuComponent } from './menu/menu.component';
 
 
 @NgModule({
@@ -16,6 +17,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     AboutComponent,
     DonateComponent,
     HomeComponent,
+    MenuComponent,
   ],
   imports: [
     BrowserModule,
