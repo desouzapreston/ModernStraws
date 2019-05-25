@@ -16,7 +16,7 @@ import { MenuComponent } from './menu/menu.component';
     AppComponent,
     AboutComponent,
     DonateComponent,
-    HomeComponent,
+    HomeComponent,  
     MenuComponent,
   ],
   imports: [
