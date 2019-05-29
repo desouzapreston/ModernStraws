@@ -9,6 +9,10 @@ import { HomeComponent } from './home/home.component';
 import { MatButtonModule, MatCardModule, MatToolbarModule } from '@angular/material';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MenuComponent } from './menu/menu.component';
+import { AngularFireModule } from '@angular/fire';
+import { AngularFireDatabaseModule } from '@angular/fire/database';
+import { environment } from '../environments/environment';
+
 
 
 @NgModule({
@@ -26,6 +30,8 @@ import { MenuComponent } from './menu/menu.component';
     MatToolbarModule,
     MatButtonModule,
     MatCardModule,
+    AngularFireModule.initializeApp(environment.firebaseConfig),
+    AngularFireDatabaseModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
