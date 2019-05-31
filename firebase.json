@@ -14,7 +14,7 @@
     "source": "functions"
   },
   "hosting": {
-    "public": "dist",
+    "public": "dist/PaperStrawsCharlie",
     "ignore": [
       "firebase.json",
       "**/.*",
