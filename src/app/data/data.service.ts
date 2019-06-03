@@ -1,8 +1,8 @@
 import { Injectable } from '@angular/core';
-import { AngularFirestore } from '@angular/fire/firestore';
+import { AngularFirestore, AngularFirestoreCollection } from '@angular/fire/firestore';
 import { v4 as uuid } from 'uuid';
 import { Observable } from 'rxjs';
-import { DataObject } from './data.object';
+import { DataObject } from "./DataObject";
 
 @Injectable({
   providedIn: 'root'
@@ -21,12 +21,13 @@ export class DataService {
     })
   }
 
-  read(collectionName: string): Observable<any> {
+  read(collectionName: string): Observable<{}[]> {
+    // let collection: AngularFirestoreCollection<DataObject> = this.angularFirestore.collection(collectionName)
     let collection = this.angularFirestore.collection(collectionName)
     return collection.valueChanges()
   }
-  
+
 }
 /*
-  dataService.insert({lastName: 'deSouza', firstName: 'Preston' })
+  dataService.insert("Person", {lastName: 'deSouza', firstName: 'Preston' })
 */

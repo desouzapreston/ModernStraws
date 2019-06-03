@@ -1,2 +1,14 @@
 /* You can add global styles to this file, and also import other style files */
 @import '~@angular/material/prebuilt-themes/indigo-pink.css';
+
+
+.normal-form {
+  display: grid;
+  align-content: start;
+  justify-content: start;
+  grid-gap: 3px;
+  grid-template-columns: auto;
+  /* background-color: beige */
+  /* flex-direction: column; */
+  /* align-content: space-between; */
+}

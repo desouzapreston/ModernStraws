@@ -6,12 +6,16 @@ import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
 import { AppRoutingModule } from './app-routing.module';
 import { DonateComponent } from './donate/donate.component';
 import { HomeComponent } from './home/home.component';
-import { MatButtonModule, MatCardModule, MatToolbarModule } from '@angular/material';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MenuComponent } from './menu/menu.component';
 import { AngularFireModule } from '@angular/fire';
 import { AngularFireDatabaseModule } from '@angular/fire/database';
 import { environment } from '../environments/environment';
+import { ProductListComponent } from './product-list/product-list.component';
+import { ProductDetailComponent } from './product-detail/product-detail.component';
+import { MaterialModule } from './material.module';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
+import { DataService } from './data/data.service';
 
 
 
@@ -21,19 +25,23 @@ import { environment } from '../environments/environment';
     AboutComponent,
     DonateComponent,
     HomeComponent,  
-    MenuComponent,
+    MenuComponent, 
+    ProductListComponent, 
+    ProductDetailComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MatToolbarModule,
-    MatButtonModule,
-    MatCardModule,
+    MaterialModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFireDatabaseModule,
+    FormsModule,
+    ReactiveFormsModule,
   ],
-  providers: [],
+  providers: [
+    DataService,
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
