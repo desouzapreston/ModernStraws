@@ -1,0 +1,7 @@
+.banner {
+    background-color: rgb(250, 251, 252);
+    width: 188px;
+    margin: auto;
+    padding: 8px;
+    border: 25px solid rgb(149, 149, 236);
+  }
