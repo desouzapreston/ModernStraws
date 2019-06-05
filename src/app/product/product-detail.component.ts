@@ -26,7 +26,7 @@ export class ProductDetailComponent implements OnInit {
     let formObject = this.productForm.value
     // console.log("onSubmit", reqObject)
     this.dataService.insertUpdate("Product", formObject)
-    this.router.navigateByUrl('/productList');
+    this.router.navigateByUrl('/products');
   }
 
 }

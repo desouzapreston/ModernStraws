@@ -12,3 +12,8 @@
   /* flex-direction: column; */
   /* align-content: space-between; */
 }
+
+
+.container {
+  text-align: center;
+}
