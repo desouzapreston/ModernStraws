@@ -12,6 +12,7 @@ const routes: Routes = [
   { path: 'home', component: HomeComponent },
   { path: 'products', component: ProductListComponent },
   { path: 'productDetail', component: ProductDetailComponent },
+  { path: 'productList', component: ProductListComponent },
   { path: '', redirectTo: '/home', pathMatch: 'full' }, //empty path case
   { path: '**', redirectTo: '/home', pathMatch: 'full' }, //fallback route for wildcard '**' (invalid URLs)
 
