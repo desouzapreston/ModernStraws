@@ -1,6 +1,7 @@
-import { DataService } from './../data/data.service';
+import { DataService } from '../data/data.service';
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormBuilder, FormControl } from '@angular/forms';
+import { FormGroup, FormControl } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-product-detail',
@@ -16,15 +17,16 @@ export class ProductDetailComponent implements OnInit {
     price: new FormControl(''),
   })
 
-  constructor(private formBuilder: FormBuilder, private dataService: DataService) { }
+  constructor(private router: Router, private dataService: DataService) { }
 
   ngOnInit() {
   }
 
   onSubmit() {
-    let reqObject = this.productForm.value
-    console.log("onSubmit", reqObject)
-    this.dataService.insert("Product", reqObject)
+    let formObject = this.productForm.value
+    // console.log("onSubmit", reqObject)
+    this.dataService.insertUpdate("Product", formObject)
+    this.router.navigateByUrl('/productList');
   }
 
 }

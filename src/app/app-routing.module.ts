@@ -3,8 +3,8 @@ import { Routes, RouterModule } from '@angular/router';
 import { AboutComponent } from './about/about.component';
 import { DonateComponent } from './donate/donate.component';
 import { HomeComponent } from './home/home.component';
-import { ProductListComponent } from './product-list/product-list.component';
-import { ProductDetailComponent } from './product-detail/product-detail.component';
+import { ProductListComponent } from './product/product-list.component';
+import { ProductDetailComponent } from './product/product-detail.component';
 
 const routes: Routes = [
   { path: 'about', component: AboutComponent },

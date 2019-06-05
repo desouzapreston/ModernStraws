@@ -58,7 +58,8 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "PaperStrawsCharlie:build"
+            "browserTarget": "PaperStrawsCharlie:build",
+            "port": 4300
           },
           "configurations": {
             "production": {

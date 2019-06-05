@@ -11,11 +11,12 @@ import { MenuComponent } from './menu/menu.component';
 import { AngularFireModule } from '@angular/fire';
 import { AngularFireDatabaseModule } from '@angular/fire/database';
 import { environment } from '../environments/environment';
-import { ProductListComponent } from './product-list/product-list.component';
-import { ProductDetailComponent } from './product-detail/product-detail.component';
+import { ProductListComponent } from './product/product-list.component';
+import { ProductDetailComponent } from './product/product-detail.component';
 import { MaterialModule } from './material.module';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { DataService } from './data/data.service';
+import { AngularFirestore } from '@angular/fire/firestore';
 
 
 
@@ -41,6 +42,7 @@ import { DataService } from './data/data.service';
   ],
   providers: [
     DataService,
+    AngularFirestore,
   ],
   bootstrap: [AppComponent]
 })
