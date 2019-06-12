@@ -1,0 +1,8 @@
+.submission-container {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .submission-container > * {
+    width: 100%;
+  }

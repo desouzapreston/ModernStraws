@@ -17,6 +17,7 @@ import { MaterialModule } from './material.module';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { DataService } from './data/data.service';
 import { AngularFirestore } from '@angular/fire/firestore';
+import { ContactFormComponent } from './home/contact-form.component';
 
 
 
@@ -28,7 +29,7 @@ import { AngularFirestore } from '@angular/fire/firestore';
     HomeComponent,  
     MenuComponent, 
     ProductListComponent, 
-    ProductDetailComponent,
+    ProductDetailComponent, ContactFormComponent,
   ],
   imports: [
     BrowserModule,

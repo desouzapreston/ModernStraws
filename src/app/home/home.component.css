@@ -1,0 +1,7 @@
+.staff {
+    max-width: 400px;
+}
+.staff-image {
+    background-image: url('https://vignette.wikia.nocookie.net/avatar/images/3/38/Doves.png/revision/latest?cb=20140116093231');
+    background-size: cover;
+}
