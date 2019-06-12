@@ -17,7 +17,8 @@ import { MaterialModule } from './material.module';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { DataService } from './data/data.service';
 import { AngularFirestore } from '@angular/fire/firestore';
-import { ContactFormComponent } from './home/contact-form.component';
+import { AppContactForm } from './home/contact-form.component';
+import { ShowOnDirtyErrorStateMatcher, ErrorStateMatcher } from '@angular/material';
 
 
 
@@ -29,7 +30,8 @@ import { ContactFormComponent } from './home/contact-form.component';
     HomeComponent,  
     MenuComponent, 
     ProductListComponent, 
-    ProductDetailComponent, ContactFormComponent,
+    ProductDetailComponent, 
+    AppContactForm,
   ],
   imports: [
     BrowserModule,
@@ -42,6 +44,7 @@ import { ContactFormComponent } from './home/contact-form.component';
     ReactiveFormsModule,
   ],
   providers: [
+    {provide: ErrorStateMatcher, useClass: ShowOnDirtyErrorStateMatcher},
     DataService,
     AngularFirestore,
   ],

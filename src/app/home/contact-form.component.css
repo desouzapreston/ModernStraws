@@ -2,7 +2,9 @@
     display: flex;
     flex-direction: column;
   }
-  
-  .submission-container > * {
+.submission-container > * {
     width: 100%;
   }
+.submission-width-in {
+    width: 100%;
+}
