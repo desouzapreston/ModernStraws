@@ -1,9 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { ErrorStateMatcher } from '@angular/material/core';
 import { FormControl, FormGroupDirective, NgForm, Validators } from '@angular/forms';
+import { ActivatedRoute } from '@angular/router';
 
 // This is to check our input
-export class MyErrorStateMatcher implements ErrorStateMatcher {
+class MyErrorStateMatcher implements ErrorStateMatcher {
   isErrorState(control: FormControl | null, form: FormGroupDirective | NgForm | null): boolean {
     const isSubmitted = form && form.submitted;
     return !!(control && control.invalid && (control.dirty || control.touched ));
@@ -17,11 +18,18 @@ export class MyErrorStateMatcher implements ErrorStateMatcher {
   styleUrls: ['./contact-form.component.css']
 })
 
-export class AppContactForm {
+export class AppContactForm implements OnInit {
+  matcher = new MyErrorStateMatcher();
   emailFormControl = new FormControl('', [
     Validators.required,
     Validators.email,
   ]);
-  matcher = new MyErrorStateMatcher();
+
+  constructor(private route: ActivatedRoute) {}
+
+  ngOnInit(): void {
+    let parm = this.route.snapshot.params['parm']
+    console.log("ngOnInit", parm)
+  }
 }
 

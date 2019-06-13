@@ -11,6 +11,8 @@
         </p>
     </mat-card-content>
     <mat-card-actions>
-        <button mat-raised-button (click)="onCreate()" color="accent">Reach out to our CEO directly</button>
+        <button mat-raised-button (click)="onClick()" color="accent">Reach out to our CEO directly</button>
+        <!-- <button mat-raised-button routerLink="/contactForm" color="accent">**Reach out to our CEO directly</button> -->
+        <!-- <button mat-raised-button [routerLink]="['/contactForm']" color="accent">***Reach out to our CEO directly</button> -->
     </mat-card-actions>
 </mat-card>

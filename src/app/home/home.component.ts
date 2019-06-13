@@ -20,8 +20,9 @@ export class HomeComponent implements OnInit {
   ngOnInit() {
   }
 
-  onCreate() {
+  onClick() {
     this.router.navigateByUrl('/contactForm');
+    // this.router.navigate(['/contactForm', 'myData']);
   }
 
 }
