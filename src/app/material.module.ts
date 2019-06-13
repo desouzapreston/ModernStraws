@@ -24,7 +24,7 @@ import * as Material from "@angular/material";
     // Material.MatDialogModule,
     // Material.MatMenuModule,
     Material.MatCardModule,
-    // Material.MatChipsModule,
+    Material.MatChipsModule,
   ],
   exports: [
     // Material.MatToolbarModule,
@@ -45,7 +45,7 @@ import * as Material from "@angular/material";
     // Material.MatDialogModule,
     // Material.MatMenuModule,
     Material.MatCardModule,
-    // Material.MatChipsModule,
+    Material.MatChipsModule,
   ],
   declarations: []
 })
