@@ -11,7 +11,6 @@ import { MaterialModule } from './material.module';
 import { AppComponent } from './app.component';
 import { AboutComponent } from './about/about.component';
 import { AppRoutingModule } from './app-routing.module';
-import { DonateComponent } from './donate/donate.component';
 import { HomeComponent } from './home/home.component';
 import { MenuComponent } from './menu/menu.component';
 import { environment } from '../environments/environment';
@@ -27,7 +26,6 @@ import { ShowOnDirtyErrorStateMatcher, ErrorStateMatcher } from '@angular/materi
   declarations: [
     AppComponent,
     AboutComponent,
-    DonateComponent,
     HomeComponent,  
     MenuComponent, 
     ProductListComponent, 
