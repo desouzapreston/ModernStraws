@@ -9,7 +9,6 @@ import { AngularFirestore } from '@angular/fire/firestore';
 
 import { MaterialModule } from './material.module';
 import { AppComponent } from './app.component';
-import { AboutComponent } from './about/about.component';
 import { AppRoutingModule } from './app-routing.module';
 import { HomeComponent } from './home/home.component';
 import { MenuComponent } from './menu/menu.component';
@@ -25,7 +24,6 @@ import { ShowOnDirtyErrorStateMatcher, ErrorStateMatcher } from '@angular/materi
 @NgModule({
   declarations: [
     AppComponent,
-    AboutComponent,
     HomeComponent,  
     MenuComponent, 
     ProductListComponent, 
