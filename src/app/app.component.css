@@ -1,11 +1,14 @@
 .banner {
     background-color: rgb(250, 251, 252);
     margin: auto;
-    padding: 8px;
+    padding: 4px;
     border: 25px solid rgb(149, 149, 236);
 }
 
 .inner {
-    width: 150px;
-    padding: 8px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 500px;
+    padding: 4px;
 }
