@@ -7,6 +7,7 @@ import { AppContactForm } from './home/contact-form.component';
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
+  { path: 'products', component: ProductListComponent },
   { path: 'productDetail', component: ProductDetailComponent },
   { path: 'contactForm', component: AppContactForm },
   // { path: 'contactForm/:parm', component: AppContactForm },
