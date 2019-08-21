@@ -24,7 +24,7 @@ export class DataService {
       let msg = forUpdate ? "updated" : "created"
       console.log(msg, formObject)
     }).catch(err => {
-      console.log("error: " + formObject + " " + err)
+      console.error("error: " + formObject + " " + err)
     })
   }
   
