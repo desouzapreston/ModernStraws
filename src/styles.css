@@ -3,11 +3,11 @@
 
 
 .normal-form {
-  display: grid;
-  align-content: start;
-  justify-content: start;
-  grid-gap: 3px;
-  grid-template-columns: auto;
+  display: flex;
+  /* align-content: start; */
+  /* justify-content: start; */
+  /* grid-gap: 3px; */
+  /* grid-template-columns: auto; */
   /* background-color: beige */
   /* flex-direction: column; */
   /* align-content: space-between; */
@@ -16,4 +16,5 @@
 
 .container {
   text-align: center;
+  width: 100%;
 }

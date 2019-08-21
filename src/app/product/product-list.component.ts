@@ -2,7 +2,7 @@ import { Component, OnInit, ViewChild, OnDestroy } from '@angular/core';
 import { Router } from '@angular/router';
 import { DataService } from '../data/data.service';
 import { Subscription } from 'rxjs';
-import { DataObject } from '../data/DataObject';
+import { DataObject } from '../data/data-object';
 import { MatTableDataSource, MatPaginator, MatSort } from '@angular/material';
 
 @Component({

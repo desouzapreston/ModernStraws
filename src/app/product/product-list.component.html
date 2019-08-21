@@ -1,26 +1,39 @@
-<button mat-raised-button (click)="onCreate()" color="primary">Add</button>
+<mat-card>
+  <mat-card-header>
+    <mat-card-title>{{getTitle()}}</mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
 
-<mat-form-field>
-  <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Filter">
-</mat-form-field>
+    <button mat-raised-button (click)="onCreate()" color="primary">Add</button>
 
-<table mat-table [dataSource]="dataSource" class="container mat-elevation-z8">
+    <mat-form-field>
+      <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Filter">
+    </mat-form-field>
 
-  <ng-container matColumnDef="name">
-    <th mat-header-cell *matHeaderCellDef> Name </th>
-    <td mat-cell *matCellDef="let element"> {{element.name}} </td>
-  </ng-container>
+    <table mat-table [dataSource]="dataSource" class="normal-form">
 
-  <ng-container matColumnDef="description">
-    <th mat-header-cell *matHeaderCellDef> Description </th>
-    <td mat-cell *matCellDef="let element"> {{element.description}} </td>
-  </ng-container>
+      <ng-container matColumnDef="name">
+        <th mat-header-cell *matHeaderCellDef> Name </th>
+        <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+      </ng-container>
 
-  <ng-container matColumnDef="price">
-    <th mat-header-cell *matHeaderCellDef> Price </th>
-    <td mat-cell *matCellDef="let element"> {{element.price}} </td>
-  </ng-container>
+      <ng-container matColumnDef="description">
+        <th mat-header-cell *matHeaderCellDef> Description </th>
+        <td mat-cell *matCellDef="let element"> {{element.description}} </td>
+      </ng-container>
 
-  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
-</table>
+      <ng-container matColumnDef="price">
+        <th mat-header-cell *matHeaderCellDef> Price </th>
+        <td mat-cell *matCellDef="let element"> {{element.price}} </td>
+      </ng-container>
+
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+
+  </mat-card-content>
+  <mat-card-footer>
+    <mat-paginator [pageSizeOptions]="[5, 10, 25, 100]" [pageSize]="100">
+    </mat-paginator>
+  </mat-card-footer>
+</mat-card>
