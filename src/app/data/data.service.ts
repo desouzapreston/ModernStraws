@@ -21,15 +21,16 @@ export class DataService {
     }
     let collection: AngularFirestoreCollection<DataObject> = this.angularFirestore.collection(collectionName)
     collection.doc(formObject.id).set(formObject).then(() => {
-      let msg = forUpdate ? "updated" : "inserted"
+      let msg = forUpdate ? "updated" : "created"
       console.log(msg, formObject)
     }).catch(err => {
       console.log("error: " + formObject + " " + err)
     })
   }
-
+  
   read(collectionName: string): Observable<DataObject[]> {
     let collection: AngularFirestoreCollection<DataObject> = this.angularFirestore.collection(collectionName)
+    console.log("read", collectionName)
     return collection.valueChanges()
   }
 

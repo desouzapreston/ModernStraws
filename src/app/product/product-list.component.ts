@@ -64,7 +64,7 @@ export class ProductListComponent implements OnInit, OnDestroy {
   }
 
   applyFilter(filterValue: string) {
-    console.log(filterValue)
+    // console.log(filterValue)
     this.dataSource.filter = filterValue.trim().toLowerCase();
     if (this.dataSource.paginator) {
       this.dataSource.paginator.firstPage();
