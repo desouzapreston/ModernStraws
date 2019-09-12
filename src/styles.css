@@ -11,10 +11,12 @@
   /* background-color: beige */
   /* flex-direction: column; */
   /* align-content: space-between; */
+  width: 100%;
 }
 
 
 .container {
-  text-align: center;
+  text-align: left;
   width: 100%;
+  justify-content: start;
 }

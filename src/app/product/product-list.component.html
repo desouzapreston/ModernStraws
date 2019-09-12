@@ -1,6 +1,6 @@
 <mat-card>
   <mat-card-header>
-    <mat-card-title>{{getTitle()}}</mat-card-title>
+    <mat-card-title>Product List</mat-card-title>
   </mat-card-header>
   <mat-card-content>
 
@@ -10,7 +10,7 @@
       <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Filter">
     </mat-form-field>
 
-    <table mat-table [dataSource]="dataSource" class="normal-form">
+    <table mat-table [dataSource]="dataSource" mat-sort class="mat-elevation-z8 container">
 
       <ng-container matColumnDef="name">
         <th mat-header-cell *matHeaderCellDef> Name </th>
@@ -29,6 +29,24 @@
 
       <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
       <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+      
+      <ng-container matColumnDef="loading">
+        <td mat-footer-cell *matFooterCellDef colspan="displayedColumns.length">
+          Loading data...
+        </td>
+      </ng-container>
+      <ng-container matColumnDef="noData">
+        <td mat-footer-cell *matFooterCellDef colspan="displayedColumns.length">
+          No data.
+        </td>
+      </ng-container>
+
+      <tr mat-footer-row *matFooterRowDef="['loading']"
+        [ngClass]="{'hide':listData!=null}">
+      </tr>
+      <tr mat-footer-row *matFooterRowDef="['noData']"
+        [ngClass]="{'hide':!(listData!=null && listData.data.length==0)}">
+      </tr>
     </table>
 
   </mat-card-content>
