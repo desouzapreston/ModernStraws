@@ -10,6 +10,10 @@ export class DataService {
 
   constructor(private angularFirestore: AngularFirestore) { }
 
+  // insertUpdate(collectionName: string, formObject: any) {
+  // }
+  // insertUpdate(collectionName: string, formObject: Vehicle) {
+  // }
   insertUpdate<T>(collectionName: string, formObject: T) {
     let forUpdate: boolean
     if (formObject['id'] == undefined) {

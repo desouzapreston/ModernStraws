@@ -1,4 +1,4 @@
-import { DataObject } from "./DataObject";
+import { DataObject } from "./data-object";
 
 export interface Product extends DataObject {
   name: string,
