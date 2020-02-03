@@ -1,8 +1,16 @@
+body {
+    background-color: rgb(53, 53, 53);
+}
+
 .banner {
-    background-color: rgb(250, 251, 252);
+    background-color: rgb(53, 53, 53);
     margin: auto;
     padding: 4px;
     border: 25px solid rgb(149, 149, 236);
+    width: 30%;
+    position: absolute;
+    top: 120px;
+    left: 650px;
 }
 
 .inner {
@@ -11,4 +19,17 @@
     margin-right: auto;
     width: 500px;
     padding: 4px;
+}
+
+.outer {
+    position: relative; 
+    left: 0; 
+    top: 0;
+    width: 70%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    height: 20%;
+    opacity: 75%;
 }

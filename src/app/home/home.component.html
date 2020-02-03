@@ -1,18 +1,50 @@
 <!DOCTYPE html>
-<mat-card class="staff">
+
+<body>
+    <mat-card class="staff">
+        <!--Surya Purimetla-->
+        <mat-card-header>
+            <div mat-card-avatar class="staff-image"></div>
+            <mat-card-title>Surya Purimetla</mat-card-title>
+            <mat-card-subtitle>Founder</mat-card-subtitle>
+        </mat-card-header>
+        <mat-card-content>
+            <iframe
+                src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fphoto.php%3Ffbid%3D2213568198687055%26set%3Da.136640883046474%26type%3D3&width=500"
+                width="500" height="503" style="border:none;overflow:hidden" scrolling="no" frameborder="0"
+                allowTransparency="true" allow="encrypted-media"></iframe>
+            <p>
+                <b>Founder: </b>Surya Purimetla founded the NPO PaperStraws with a focus on... (etc)
+            </p>
+        </mat-card-content>
+        <mat-card-actions>
+            <button mat-raised-button (click)="onClick()" color="accent">Reach out to our CEO directly</button>
+            <!-- <button mat-raised-button routerLink="/contactForm" color="accent">**Reach out to our CEO directly</button> -->
+            <!-- <button mat-raised-button [routerLink]="['/contactForm']" color="accent">***Reach out to our CEO directly</button> -->
+        </mat-card-actions>
+        <!--Preston deSouza-->
+        <mat-card-header>
+            <div mat-card-avatar><img src="assets\img\icon_preston.png"></div>>
+            <mat-card-title>Preston deSouza</mat-card-title>
+            <mat-card-subtitle>CTO</mat-card-subtitle>
+        </mat-card-header>
+        <mat-card-content>
+            <img class="staff-preston" src="assets\img\Preston_deSouza.jpg" alt="preston">
+            <p>
+                <b>Chief Technology Officer</b>
+            </p>
+        </mat-card-content>
+        <!-- Siboney Martinez
     <mat-card-header>
         <div mat-card-avatar class="staff-image"></div>
-        <mat-card-title>Surya Purimetla</mat-card-title>
-        <mat-card-subtitle>Founder</mat-card-subtitle>
+        <mat-card-title>Preston deSouza</mat-card-title>
+        <mat-card-subtitle>CTO</mat-card-subtitle>
     </mat-card-header>
-    <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fphoto.php%3Ffbid%3D2486330588077480%26set%3Da.136640883046474%26type%3D3&width=500" width="500" height="531" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>    <mat-card-content>
+    <mat-card-content>
+        <img class="staff-preston" src="assets/img/Preston_deSouza.jpg" alt="preston">
         <p>
-            Surya Purimetla founded the NPO PaperStraws with a focus on... (etc)
+            <b>Chief Technology Officer</b>
         </p>
-    </mat-card-content>
-    <mat-card-actions>
-        <button mat-raised-button (click)="onClick()" color="accent">Reach out to our CEO directly</button>
-        <!-- <button mat-raised-button routerLink="/contactForm" color="accent">**Reach out to our CEO directly</button> -->
-        <!-- <button mat-raised-button [routerLink]="['/contactForm']" color="accent">***Reach out to our CEO directly</button> -->
-    </mat-card-actions>
-</mat-card>
+    </mat-card-content> -->
+    </mat-card>
+</body>
