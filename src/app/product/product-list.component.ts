@@ -1,9 +1,11 @@
+import { Vehicle } from './../data/vehicle';
 import { Component, OnInit, ViewChild, OnDestroy } from '@angular/core';
 import { Router } from '@angular/router';
 import { DataService } from '../data/data.service';
 import { Subscription } from 'rxjs';
-import { DataObject } from '../data/DataObject';
+import { DataObject } from '../data/data-object';
 import { MatTableDataSource, MatPaginator, MatSort } from '@angular/material';
+import { Product } from '../data/product';
 
 @Component({
   selector: 'app-product-list',
@@ -14,9 +16,7 @@ export class ProductListComponent implements OnInit, OnDestroy {
 
   displayedColumns: string[] = ['name', 'description', 'price']
 
-  // products: Observable<DataObject[]>
-  
-  dataSource: MatTableDataSource<DataObject>
+  dataSource: MatTableDataSource<Product>
   @ViewChild(MatPaginator) paginator: MatPaginator;
   @ViewChild(MatSort) sort: MatSort;
 
@@ -25,7 +25,7 @@ export class ProductListComponent implements OnInit, OnDestroy {
   constructor(private router: Router, private dataService: DataService) {
   }
 
-  setupDataSource(products: DataObject[]) {
+  setupDataSource(products: Product[]) {
     this.dataSource = new MatTableDataSource(products)
     this.dataSource.paginator = this.paginator;
     this.dataSource.sort = this.sort;
@@ -45,8 +45,8 @@ export class ProductListComponent implements OnInit, OnDestroy {
   }
 
   ngOnInit() {
-    let products = this.dataService.read("Product")
-    this.subscription = products.subscribe((data: DataObject[]) => {
+    let products = this.dataService.read<Product>("Product")
+    this.subscription = products.subscribe((data: Product[]) => {
       console.log("updating products", data)
       // this.dataSource.data = data;
       this.setupDataSource(data)
@@ -64,7 +64,7 @@ export class ProductListComponent implements OnInit, OnDestroy {
   }
 
   applyFilter(filterValue: string) {
-    console.log(filterValue)
+    // console.log(filterValue)
     this.dataSource.filter = filterValue.trim().toLowerCase();
     if (this.dataSource.paginator) {
       this.dataSource.paginator.firstPage();
